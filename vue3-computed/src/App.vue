@@ -1,20 +1,37 @@
 <template>
-  <h1 @click="activate">
-    Hello?!
-  </h1>
+  <button @click="handler">
+    Click me!
+  </button>
+  <ul>
+    <li
+      v-for="{id, name} in newFruits"
+      :key="id">
+      {{ name }}-{{ id }}
+    </li>
+  </ul>
 </template>
 
 <script>
-  export default{
-    data(){
-      return{
-        isActive: false
-      }
-    },
-    methods:{
-      activate(){
-        this.isActive = true
-      }
+import shortid from 'shortid'
+export default{
+  data(){
+    return{
+      fruits: ['Apple','Banana','Cherry']
+    }
+  },
+  computed: {
+    newFruits() {
+      return this.fruits.map(fruit=>({
+          id: shortid.generate(),
+          name: fruit
+        }
+      ))
+    }
+  },
+  methods:{
+    handler(){
+      this.fruits.push('Orange')
     }
   }
+}
 </script>
