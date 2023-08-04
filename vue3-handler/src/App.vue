@@ -1,17 +1,17 @@
 <template>
-  <button @click="handler('hi', $event)">
-    Click 1
-  </button>
-  <button @click="handler('what', $event)">
-    Click 2
-  </button>
+  <a 
+    href="https:/naver.com"
+    target="_blank"
+    @click="handler">
+    NAVER
+  </a>
 </template>
 
 <script>
 export default{
   methods:{
-    handler(msg){
-      console.log(msg);
+    handler(){
+      console.log('ABC!');
     }
   }
 }
