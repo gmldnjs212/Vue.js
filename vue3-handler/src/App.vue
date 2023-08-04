@@ -1,17 +1,17 @@
 <template>
-  <button @click="handler('hi', $event)">
-    Click 1
-  </button>
-  <button @click="handler('what', $event)">
-    Click 2
+  <button @click="handlerA(), handlerB">
+    Click me!
   </button>
 </template>
 
 <script>
 export default{
   methods:{
-    handler(msg){
-      console.log(msg);
+    handlerA(){
+      console.log('A');
+    },
+    handlerB(){
+      console.log('B');
     }
   }
 }
