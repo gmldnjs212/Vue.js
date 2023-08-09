@@ -1,28 +1,19 @@
 <template>
-  <div
-    :class="{ large }"
-    :style="{ backgroundColor : color }"
-    class="btn">
-    <slot></slot>  
+  <div class="btn">
+    <slot></slot>
   </div>
+  <h1></h1>
 </template>
 
 <script>
 export default{
-  props:{
-    color: {
-      type: String,
-      default: 'gray'
-    },
-    large:{
-      type: Boolean,
-      default: false
-    }
+  emits:{
+    'click'
   }
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
   .btn{
     display: inline-block;
     margin: 4px;
@@ -31,9 +22,7 @@ export default{
     background-color: gray;
     color: white;
     cursor: pointer;
-    &.large{
-      font-size: 20px;
-      padding: 10px 20px;
-    }
   }
 </style>
+
+<!-- 0326 부터 -->

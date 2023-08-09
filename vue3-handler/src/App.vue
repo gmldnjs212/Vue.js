@@ -1,15 +1,7 @@
 <template>
-  <MyBtn>Banana</MyBtn>
-  <MyBtn
-    :color="colorBlack">
-    <span style="color:red">Banana</span>
+  <MyBtn @click="log">
+    Banana
   </MyBtn>
-  <MyBtn
-    large
-    :color="colorRed">
-    Apple
-  </MyBtn>
-  <MyBtn>Cherry</MyBtn>
 </template>
 
 <script>
@@ -19,10 +11,10 @@ export default{
   components:{
     MyBtn
   },
-  data(){
-    return{
-      colorBlack: "#000",
-      colorRed: "#F00"
+  methods:{
+    log(){
+      console.log('Click!!')
     }
   }
-}</script>
+}
+</script>
