@@ -2,7 +2,7 @@
   <div class="btn">
     <slot></slot>
   </div>
-  <h1 @dblclick="$emit('heropy')">
+  <h1 @dblclick="$emit('heropy', 123)">
     ABC
   </h1>
 </template>
@@ -11,8 +11,8 @@
 export default{
   emits:[
     'heropy'
-    ]
-  }
+  ]
+}
 </script>
 
 <style scoped>
@@ -26,5 +26,3 @@ export default{
     cursor: pointer;
   }
 </style>
-
-<!-- 0326 부터 -->

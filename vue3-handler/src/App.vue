@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MyBtn from '~/components/MyBtn'
+import MyBtn from './components/MyBtn'
 
 export default{
   components:{
@@ -13,8 +13,8 @@ export default{
   },
   methods:{
     log(event){
-      console.log('Click!!')
-      console.log(event)
+      console.log("Click !"),
+      console.log(event);
     }
   }
 }
