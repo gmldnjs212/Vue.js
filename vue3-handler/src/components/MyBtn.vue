@@ -2,15 +2,17 @@
   <div class="btn">
     <slot></slot>
   </div>
-  <h1></h1>
+  <h1 @dblclick="$emit('heropy')">
+    ABC
+  </h1>
 </template>
 
 <script>
 export default{
-  emits:{
-    'click'
+  emits:[
+    'heropy'
+    ]
   }
-}
 </script>
 
 <style scoped>
