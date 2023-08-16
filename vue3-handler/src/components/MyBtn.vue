@@ -2,16 +2,24 @@
   <div class="btn">
     <slot></slot>
   </div>
-  <h1 @dblclick="$emit('heropy', 123)">
+  <h1 @dblclick="$emit('heropy', $event)">
     ABC
   </h1>
+  <input 
+    type="text" 
+    v-model="msg" />
 </template>
 
 <script>
 export default{
   emits:[
     'heropy'
-  ]
+  ],
+  data(){
+    return{
+      msg: ''
+    }
+  }
 }
 </script>
 
