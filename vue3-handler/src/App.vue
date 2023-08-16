@@ -1,20 +1,29 @@
 <template>
-  <MyBtn @heropy="log">
-    Banana
-  </MyBtn>
+  <button @click="message = 'Good?'">
+    Click!
+  </button>
+  <h1>APP: {{ message }}</h1>
+  <Parent />
 </template>
 
 <script>
-import MyBtn from './components/MyBtn'
+import Parent from '~/components/Parent'
+import { computed } from 'vue'
 
 export default{
   components:{
-    MyBtn
+    Parent
   },
-  methods:{
-    log(event){
-      console.log("Click !"),
-      console.log(event);
+  data(){
+    return{
+      message: 'Hello World!'
+    }
+  },
+  provide(){
+    return{
+      msg: computed(()=>{
+        return this.message
+      })
     }
   }
 }
