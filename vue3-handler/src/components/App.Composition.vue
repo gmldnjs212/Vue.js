@@ -1,5 +1,5 @@
 <template>
-  <h1 @click="increase">
+  <h1 @click="incresae">
     {{ count }}
   </h1>
   <h1 @click="changeMessage">
