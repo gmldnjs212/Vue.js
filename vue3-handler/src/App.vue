@@ -1,9 +1,11 @@
+<!-- App.vue -->
+
 <template>
   <h1 @click="increase">
-    {{ count }} / {{ doubleCount }}
+    {{ count }}
   </h1>
   <h1 @click="changeMessage">
-    {{ message }} / {{ reversedMessage }}
+    {{ message }}
   </h1>
 </template>
 
@@ -12,34 +14,23 @@ export default{
   data(){
     return{
       count: 0,
-      message: 'Hello World!'
+      message: "Hello World!"
     }
   },
   computed:{
     doubleCount(){
-      return this.count * 2
+      return this.count
     },
     reversedMessage(){
       return this.message.split('').reverse().join('')
     }
-  },
-  watch:{
-    message(newValue){
-      console.log(newValue);
-    }
-  },
-  created(){
-    console.log(this.message)
-  },
-  mounted(){
-    console.log(this.count)
   },
   methods:{
     increase(){
       this.count += 1
     },
     changeMessage(){
-      this.message= 'Good?!'
+      this.message = 'Good?!'
     }
   }
 }
