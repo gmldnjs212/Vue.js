@@ -31,7 +31,7 @@
     "html-webpack-plugin": "^5.5.3",
     "postcss": "^8.4.29",
     "postcss-loader": "^5.3.0",
-    "sass": "^1.66.1",
+    "sass": "^1.64.2",
     "sass-loader": "^11.1.1",
     "style-loader": "^2.0.0",
     "vue-loader": "^17.2.2",
@@ -41,7 +41,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.3.1",
     "vue": "^3.2.36",
     "vue-router": "^4.2.4"
   }
